@@ -1,0 +1,69 @@
+.divC {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.divC:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imgI {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    margin: auto;
+}
+/* Wrapper for each card */
+.card-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    content: attr(data-number);
+    color: black;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.card-content img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.card-content h5 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Background numbers */
+.card-content::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    font-size: 13rem;
+    font-weight: 700;
+    color: rgba(141, 141, 141, 0.1);
+    z-index: 0;
+}
+
+.card-wrapper:hover .card-content {
+    color: #fff;
+    background-color: #fb6d0fe6;
+    cursor: pointer;
+}
+

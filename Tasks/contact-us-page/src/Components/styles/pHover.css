@@ -1,0 +1,27 @@
+.pL {
+    position: relative;
+    z-index:1;
+    margin: 0 0 10px 0;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.pL::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    color: #00bda6 !important;
+    background-color: #00bda6 ;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+.pL:hover{
+    color: #00bda6;
+}
+.pL:hover::after {
+    width: 100%;
+}
